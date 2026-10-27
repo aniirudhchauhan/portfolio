@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Anirudh Chauhan · Full Stack Developer</title>
+<style>
+:root{--bg:#070b14;--surface:#0e1626;--line:#1c2a44;--text:#d8e2f5;--muted:#8093b5;--accent:#22d3a5;--accent2:#5b8cff;--glow:rgba(34,211,165,.18);color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f4f7fc;--surface:#fff;--line:#d5dded;--text:#13203a;--muted:#55678a;--accent:#0a8f6e;--accent2:#2f5fe0;--glow:rgba(10,143,110,.12);color-scheme:light}}
+:root[data-theme="dark"]{--bg:#070b14;--surface:#0e1626;--line:#1c2a44;--text:#d8e2f5;--muted:#8093b5;--accent:#22d3a5;--accent2:#5b8cff;--glow:rgba(34,211,165,.18)}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 -apple-system,"Segoe UI",Roboto,sans-serif;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:44px 44px;background-attachment:fixed}
+body::after{content:"";position:fixed;inset:0;background:radial-gradient(circle at 50% 0,transparent 0,var(--bg) 75%);pointer-events:none;z-index:-1}
+.mono{font-family:ui-monospace,"JetBrains Mono",Menlo,Consolas,monospace}
+a{color:inherit;text-decoration:none}
+nav{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:14px 5vw;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .logo{color:var(--accent);font-weight:700}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-size:14px;color:var(--muted)}
+nav a:hover{color:var(--accent)}
+section{max-width:1040px;margin:0 auto;padding:70px 5vw}
+h2{font-size:1.6rem;margin:0 0 28px}
+h2::before{content:"// ";color:var(--accent)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;min-height:80vh}
+.tag{color:var(--accent);font-size:14px}
+h1{font-size:clamp(2.2rem,6vw,3.6rem);line-height:1.1;margin:10px 0}
+h1 span{background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.role{font-size:1.15rem;color:var(--muted);min-height:1.8em}
+.cursor{display:inline-block;width:9px;height:1.1em;background:var(--accent);vertical-align:-3px;animation:blink 1s steps(2) infinite}
+@keyframes blink{50%{opacity:0}}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.btn{padding:11px 20px;border-radius:8px;border:1px solid var(--accent);font-size:14px;font-weight:600}
+.btn.fill{background:var(--accent);color:#04120d}
+.btn:hover{box-shadow:0 0 22px var(--glow)}
+.win{background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:0 0 40px var(--glow);overflow:hidden}
+.win .bar{display:flex;gap:7px;padding:11px 14px;border-bottom:1px solid var(--line)}
+.win .bar i{width:11px;height:11px;border-radius:50%;background:#ff5f57}.win .bar i:nth-child(2){background:#febc2e}.win .bar i:nth-child(3){background:#28c840}
+.win pre{margin:0;padding:18px;font-size:13px;line-height:1.7;overflow-x:auto}
+.k{color:var(--accent2)}.s{color:var(--accent)}.c{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:22px;transition:.2s}
+.card:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:0 8px 30px var(--glow)}
+.card h3{margin:0 0 6px;font-size:1.05rem}
+.card p{margin:0 0 14px;color:var(--muted);font-size:14px}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chip{font-size:12px;padding:3px 10px;border-radius:99px;border:1px solid var(--line);color:var(--muted)}
+.link{color:var(--accent);font-size:14px;font-weight:600}
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:30px}
+.info{list-style:none;margin:0;padding:0;font-size:14px}
+.info li{display:flex;gap:10px;padding:9px 0;border-bottom:1px dashed var(--line);flex-wrap:wrap}
+.info b{color:var(--accent);min-width:78px;font-weight:600}
+.tech{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:14px}
+.t{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 8px;text-align:center;font-size:13px;transition:.2s}
+.t:hover{border-color:var(--accent);transform:translateY(-3px)}
+.t svg{width:44px;height:44px;display:block;margin:0 auto 8px}
+.t small{display:block;color:var(--muted);font-size:11px}
+.learn{border-style:dashed}
+.cert{display:flex;gap:12px;align-items:center}
+.cert .dot{width:10px;height:10px;border-radius:50%;background:var(--accent);flex:none;box-shadow:0 0 10px var(--accent)}
+.cert .dot.now{background:#febc2e;box-shadow:0 0 10px #febc2e}
+footer{text-align:center;padding:40px 5vw;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
+@media(max-width:760px){.hero,.about{grid-template-columns:1fr}nav ul{gap:12px;font-size:12px}.hero{min-height:auto}}
+</style>
+</head>
+<body>
+<nav><a href="#top" class="logo mono">&lt;AC /&gt;</a>
+<ul class="mono"><li><a href="#about">about</a></li><li><a href="#skills">skills</a></li><li><a href="#projects">projects</a></li><li><a href="#certs">certs</a></li><li><a href="#contact">contact</a></li></ul></nav>
+
+<section id="top" class="hero">
+<div>
+<div class="tag mono">&gt; hello, world_</div>
+<h1>I’m <span>Anirudh Chauhan</span></h1>
+<div class="role mono"><span id="typed"></span><span class="cursor"></span></div>
+<p style="color:var(--muted);max-width:480px">I build web apps from front to back with the MERN stack, and I learn best by shipping real projects.</p>
+<div class="btns"><a class="btn fill" href="#projects">View Projects</a><a class="btn" href="https://github.com/aniirudhchauhan" target="_blank" rel="noopener">GitHub ↗</a><a class="btn" href="#contact">Contact Me</a></div>
+</div>
+<div class="win"><div class="bar"><i></i><i></i><i></i></div>
+<pre class="mono"><span class="k">const</span> developer = {
+  name: <span class="s">"Anirudh Chauhan"</span>,
+  role: <span class="s">"Full Stack Developer"</span>,
+  stack: [<span class="s">"MongoDB"</span>, <span class="s">"Express"</span>,
+          <span class="s">"React"</span>, <span class="s">"Node.js"</span>],
+  location: <span class="s">"Mandi, HP, India"</span>,
+  learning: <span class="s">"MERN Stack"</span>,
+  openToWork: <span class="k">true</span>
+};
+<span class="c">// building in public ⚡</span></pre></div>
+</section>
+
+<section id="about">
+<h2>About me</h2>
+<div class="about">
+<div>
+<p>I’m a BCA student and aspiring full stack developer from Mandi, Himachal Pradesh. I started with Python and Data Structures &amp; Algorithms, then moved into web development, where I work with HTML, CSS and JavaScript and am now going deeper into the MERN stack.</p>
+<p>I enjoy turning ideas into working products: task managers, news apps, a marketing agency site and games. I’ve also studied AI and cloud computing with AWS.</p>
+</div>
+<ul class="info mono">
+<li><b>Name</b> Anirudh Chauhan</li>
+<li><b>Location</b> Mandi, Himachal Pradesh, India</li>
+<li><b>Education</b> BCA, Vallabh Government College</li>
+<li><b>Phone</b> <a href="tel:+917876701924">7876701924</a></li>
+<li><b>Email</b> <a href="mailto:aniirudhchauhan@gmail.com">aniirudhchauhan@gmail.com</a></li>
+</ul>
+</div>
+</section>
+
+<section id="skills">
+<h2>Tech stack</h2>
+<div class="tech">
+<div class="t"><svg viewBox="0 0 48 48"><rect width="48" height="48" rx="10" fill="#e44d26"/><text x="24" y="31" font-size="15" font-weight="700" text-anchor="middle" fill="#fff" font-family="monospace">&lt;/&gt;</text></svg>HTML5</div>
+<div class="t"><svg viewBox="0 0 48 48"><rect width="48" height="48" rx="10" fill="#264de4"/><text x="24" y="31" font-size="15" font-weight="700" text-anchor="middle" fill="#fff" font-family="monospace">{ }</text></svg>CSS3</div>
+<div class="t"><svg viewBox="0 0 48 48"><rect width="48" height="48" rx="10" fill="#f7df1e"/><text x="24" y="33" font-size="20" font-weight="800" text-anchor="middle" fill="#111" font-family="monospace">JS</text></svg>JavaScript</div>
+<div class="t"><svg viewBox="0 0 48 48"><rect width="48" height="48" rx="10" fill="#3776ab"/><text x="24" y="33" font-size="20" font-weight="800" text-anchor="middle" fill="#ffd43b" font-family="monospace">Py</text></svg>Python</div>
+<div class="t"><svg viewBox="0 0 48 48"><rect width="48" height="48" rx="10" fill="#1c2a44"/><text x="24" y="31" font-size="14" font-weight="700" text-anchor="middle" fill="#22d3a5" font-family="monospace">DSA</text></svg>DSA</div>
+<div class="t"><svg viewBox="0 0 48 48"><rect width="48" height="48" rx="10" fill="#f05032"/><text x="24" y="32" font-size="15" font-weight="800" text-anchor="middle" fill="#fff" font-family="monospace">git</text></svg>Git &amp; GitHub</div>
+<div class="t learn"><svg viewBox="0 0 48 48"><rect width="48" height="48" rx="10" fill="#47a248"/><path d="M24 8c-3 6-8 10-8 18a8 8 0 0016 0c0-8-5-12-8-18z" fill="#fff"/></svg>MongoDB<small>learning</small></div>
+<div class="t learn"><svg viewBox="0 0 48 48"><rect width="48" height="48" rx="10" fill="#333"/><text x="24" y="31" font-size="14" font-weight="700" text-anchor="middle" fill="#fff" font-family="monospace">ex</text></svg>Express<small>learning</small></div>
+<div class="t learn"><svg viewBox="0 0 48 48"><rect width="48" height="48" rx="10" fill="#0b1b2b"/><ellipse cx="24" cy="24" rx="16" ry="6" fill="none" stroke="#61dafb" stroke-width="2"/><ellipse cx="24" cy="24" rx="16" ry="6" fill="none" stroke="#61dafb" stroke-width="2" transform="rotate(60 24 24)"/><ellipse cx="24" cy="24" rx="16" ry="6" fill="none" stroke="#61dafb" stroke-width="2" transform="rotate(120 24 24)"/><circle cx="24" cy="24" r="3" fill="#61dafb"/></svg>React<small>learning</small></div>
+<div class="t learn"><svg viewBox="0 0 48 48"><rect width="48" height="48" rx="10" fill="#339933"/><text x="24" y="31" font-size="14" font-weight="800" text-anchor="middle" fill="#fff" font-family="monospace">node</text></svg>Node.js<small>learning</small></div>
+<div class="t"><svg viewBox="0 0 48 48"><rect width="48" height="48" rx="10" fill="#232f3e"/><text x="24" y="29" font-size="14" font-weight="800" text-anchor="middle" fill="#ff9900" font-family="monospace">aws</text><path d="M13 35q11 6 22 0" stroke="#ff9900" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>AWS</div>
+</div>
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+<div class="grid">
+<div class="card"><h3>Focus: Task Manager</h3><p>A clean to-do and task manager built with HTML, CSS and JavaScript, with a backend planned next.</p><div class="chips"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span></div><p></p><a class="link" href="https://github.com/aniirudhchauhan" target="_blank" rel="noopener">View on GitHub →</a></div>
+<div class="card"><h3>News App</h3><p>A MERN news application with a structured backend (controllers, middlewares, models, routes) and a client.</p><div class="chips"><span class="chip">MongoDB</span><span class="chip">Express</span><span class="chip">React</span><span class="chip">Node.js</span></div><p></p><a class="link" href="https://github.com/aniirudhchauhan" target="_blank" rel="noopener">View on GitHub →</a></div>
+<div class="card"><h3>Nova: Marketing Agency</h3><p>Website for my social media marketing agency, serving brands, restaurants and any business going online.</p><div class="chips"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span></div><p></p><a class="link" href="https://github.com/aniirudhchauhan" target="_blank" rel="noopener">View on GitHub →</a></div>
+<div class="card"><h3>Python Slot Machine</h3><p>A terminal slot machine game in Python, with a web version in the works.</p><div class="chips"><span class="chip">Python</span><span class="chip">FastAPI</span></div><p></p><a class="link" href="https://github.com/aniirudhchauhan/python-slot-machine" target="_blank" rel="noopener">View on GitHub →</a></div>
+</div>
+</section>
+
+<section id="certs">
+<h2>Education &amp; certifications</h2>
+<div class="grid">
+<div class="card"><h3>Bachelor of Computer Applications</h3><p>Vallabh Government College</p></div>
+<div class="card cert"><span class="dot"></span><div>Python with Data Structures &amp; Algorithms</div></div>
+<div class="card cert"><span class="dot"></span><div>Artificial Intelligence (AI)</div></div>
+<div class="card cert"><span class="dot"></span><div>DCA · Diploma in Computer Applications</div></div>
+<div class="card cert"><span class="dot"></span><div>AWS Cloud Practitioner Essentials</div></div>
+<div class="card cert"><span class="dot now"></span><div>Full Stack with MERN<br><small class="mono" style="color:var(--muted)">currently doing</small></div></div>
+</div>
+</section>
+
+<section id="contact">
+<h2>Get in touch</h2>
+<div class="grid">
+<a class="card" href="mailto:aniirudhchauhan@gmail.com"><h3>✉ Email</h3><p>aniirudhchauhan@gmail.com</p></a>
+<a class="card" href="tel:+917876701924"><h3>☎ Phone</h3><p>7876701924</p></a>
+<a class="card" href="https://github.com/aniirudhchauhan" target="_blank" rel="noopener"><h3>⌥ GitHub</h3><p>github.com/aniirudhchauhan</p></a>
+<div class="card"><h3>⌖ Location</h3><p>Mandi, Himachal Pradesh, India</p></div>
+</div>
+</section>
+
+<footer class="mono">© 2026 Anirudh Chauhan · built with HTML, CSS &amp; JavaScript</footer>
+
+<script>
+(function(){
+var words=["Full Stack Developer","MERN Stack Learner","Python &amp; DSA Enthusiast","Building in public"].map(function(w){var d=document.createElement("div");d.innerHTML=w;return d.textContent});
+var el=document.getElementById("typed"),w=0,i=0,del=false;
+function tick(){var t=words[w];el.textContent=t.slice(0,i);
+if(!del&&i<t.length){i++;setTimeout(tick,70)}
+else if(!del){del=true;setTimeout(tick,1400)}
+else if(i>0){i--;setTimeout(tick,35)}
+else{del=false;w=(w+1)%words.length;setTimeout(tick,300)}}
+tick();
+})();
+</script>
+</body>
+</html>
